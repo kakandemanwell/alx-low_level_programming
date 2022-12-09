@@ -5,7 +5,7 @@
 /**
  * main - prints different states of a number
  * Return: Always 0
- */
+*/
 
 int main(void)
 {
