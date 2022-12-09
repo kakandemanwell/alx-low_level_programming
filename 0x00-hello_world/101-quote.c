@@ -3,7 +3,7 @@
 
 /**
  *main - Entry point prints a statement with write
- *Retutn: Always 1 
+ *return: Always 1
  */
 
 int main(void)
