@@ -2,9 +2,8 @@
 #include <unistd.h>
 
 /**
- * main - Entry point prints a statement with write
- *
- * Retutn: Always 1 (success)
+ *main - Entry point prints a statement with write
+ *Retutn: Always 1 
  */
 
 int main(void)
