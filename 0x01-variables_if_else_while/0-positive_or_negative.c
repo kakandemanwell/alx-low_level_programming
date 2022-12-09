@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - prints different states of a number
- * Return: Always 0
-*/
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
+
 	if (n > 0)
 	{
 		printf("%i is positive\n", n);
@@ -26,5 +26,6 @@ int main(void)
 	{
 		printf("%i is negative\n", n);
 	}
+
 	return (0);
 }
