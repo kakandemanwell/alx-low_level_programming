@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/**
- * main - prints a statement with write
- *main - Entry point prints a statement with write
- *return: Always 1
- */
+/* main - prints a statement with write */
 
 int main(void)
 {
