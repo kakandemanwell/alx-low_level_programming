@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
+/**
  * main - prints different states of a number
  * Return: Always 0
  */
@@ -20,7 +20,7 @@ int main(void)
 	}
 	else if (n == 0)
 	{
-		printf("%i is Zero\n", n);
+		printf("%i is zero\n", n);
 	}
 	else if (n < 0)
 	{
