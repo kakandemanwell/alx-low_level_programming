@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/* main - prints a statement with write */
+/** 
+ * main - prints a statement with write 
+ * Return: returns 1 always upon success
+ * */
 
 int main(void)
 {
