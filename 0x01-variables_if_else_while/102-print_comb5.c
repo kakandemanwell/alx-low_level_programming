@@ -1,43 +1,35 @@
 #include <stdio.h>
 
 /**
- *main - prints all possible combinations of two two digit number pairs
- *Return: Always 0 (Success)
+ * main - Entry point, Prints all possible combinations of a pair of
+ * two digit numbers, without any repetition.
+ *
+ * Return: 0 on success.
  */
 
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int a, b;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digits*/
+	for (a = 0; a <= 98; a++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (b = 1; b <= 99; b++)
 		{
-		 	for (t = tens; t <= '9'; t++) /*print second pair*/
+			if (a < b && a != b)
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				putchar((a / 10) + '0');
+				putchar((a % 10) + '0');
+				putchar(' ');
+				putchar((b / 10) + '0');
+				putchar((b % 10) + '0');
+				if (!(a == 98 && b == 99))
 				{
-					putchar(tens);
-					putchar(ones);
+					putchar(',');
 					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tens == '9' && ones == '8') &&
-					      (t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
-				o = '0';
 			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
