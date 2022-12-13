@@ -1,22 +1,20 @@
-#include "main.h"
+#include <main.h>
 
 /**
- * man - prints the alphabets in lower case
+ * main - prints the alphabets in lower case
+ *
  * Return: 0 always as success
- * */
+ */
 
-int main(void)
+int alphabet()
 
 {
-	char alpha;
+	char letter = 'a';
 
-	alpha = 'a';
-
-	while (alpha <= 'z')
+	while (letter <= 'z')
 	{
-		_putchar(alpha);
-		alpha ++;
+		_putchar(letter);
+		letter ++;
 	}
 	_putchar("\n");
-	return 0;
 }
