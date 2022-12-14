@@ -3,7 +3,7 @@
 /**
  * print_last_digit - prints the last digitt in a number
  * @n: number
- * Return: digit
+ * Return: 0 at all times.
  */
 
 int print_last_digit(int n)
@@ -13,5 +13,7 @@ int print_last_digit(int n)
 		n = -n;
 	}
 
-	return (n % 10);
+	_putchar('0' + (n % 10));
+
+	return (0);
 }
