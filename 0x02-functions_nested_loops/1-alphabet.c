@@ -6,15 +6,14 @@
  * Return: 0 always as success
  */
 
-int alphabet()
+void main()
 
 {
-	char letter = 'a';
+	char *letter = 'a';
 
 	while (letter <= 'z')
 	{
-		_putchar(letter);
-		letter ++;
+		_putchar ("%s\n",letter);
+		letter++;
 	}
-	_putchar("\n");
 }
