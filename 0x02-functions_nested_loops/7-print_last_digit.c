@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_last_digit - prints the last digitt in a number
- * @n: number
+ * print_last_digit - prints the last digitt in a number.
+ * @n: number.
+ * @digit: last digit in n.
  * Return: 0 at all times.
  */
 
@@ -13,7 +14,7 @@ int print_last_digit(int n)
 		n = -n;
 	}
 
-	digit = n % 10;
+	int digit = n % 10;
 
 	_putchar(digit + digit);
 
