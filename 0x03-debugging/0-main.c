@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * main - checks the code from the main file
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
