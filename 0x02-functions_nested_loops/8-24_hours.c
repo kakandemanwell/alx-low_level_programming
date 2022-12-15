@@ -2,9 +2,6 @@
 
 /**
  * jack_bauer - prints every minute between 00:00 and 23:59
- * @i:  hour in time
- * @j: a minute within the timee frame
- * Return: nothing
  */
 
 void jack_bauer(void);
@@ -19,9 +16,16 @@ void jack_bauer(void);
 
 		while (j < 60)
 		{
-			_putchar("%d:%d\n", i, j);
-			j++
+			j = 0;
+
+			_putchar('0' + (i / 10));
+			_putchar('0' + (i % 10));
+			_putchar(':');
+			_putchar('0' + (j / 10));
+			_putchar('0' + (j / 10));
+			_putchar('\n');
+			j++;
 		}
-		i++
+		i++;
 	}
 }
