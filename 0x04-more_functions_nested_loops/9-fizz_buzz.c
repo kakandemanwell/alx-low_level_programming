@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * FizzBuzz - prints the Fizz-Buzz test
+ * main - prints the Fizz-Buzz test
+ * Return: 0
  */
 
-void FizzBuzz(void)
+int main(void)
 {
 	int n;
 
@@ -32,4 +33,5 @@ void FizzBuzz(void)
 
 	}
 	printf("\n");
+	return (0);
 }
