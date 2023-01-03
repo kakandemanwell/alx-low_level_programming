@@ -10,20 +10,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
+	int index;
 
 	while (*s != '\0')
 	{
-		char *a = accept;
-
-		while (*a != '\0' && *a != *s)
+		for (index = 0; accept[index]; index++)
 		{
-			a++;
+			if (*s == accept[index])
+			{
+				n++;
+				break;
+			}
+			else if (accept[index + 1] == '\0')
+			{
+				return (n);
+			}
 		}
-		if (*a == '\0')
-		{
-			break;
-		}
-		n++;
 		s++;
 	}
 	return (n);
