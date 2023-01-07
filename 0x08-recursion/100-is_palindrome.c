@@ -13,7 +13,7 @@ int check_string(char *start, char *end)
 		return (1);
 	if (*start == *end)
 		return (check_string(start + 1, end - 1));
-	
+
 	return (0);
 }
 
