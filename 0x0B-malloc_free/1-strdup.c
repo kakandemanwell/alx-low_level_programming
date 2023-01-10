@@ -17,6 +17,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
+		putchar("failed to allocate memory");
 		return (NULL);
 	}
 	if (copy == NULL)
