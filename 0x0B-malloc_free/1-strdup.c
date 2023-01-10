@@ -13,13 +13,13 @@ char *_strdup(char *str)
 	int i;
 	char *copy;
 
-	copy  = malloc((sizeof(char) * strlen(str)) + 1);
-
 	if (str == NULL)
 	{
-		putchar("failed to allocate memory");
 		return (NULL);
 	}
+
+	copy = malloc((sizeof(char) * strlen(str)) + 1);
+
 	if (copy == NULL)
 	{
 		return (NULL);
