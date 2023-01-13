@@ -31,8 +31,8 @@ int **alloc_grid(int width, int height)
 
 		if (array[a] == NULL)
 		{
-			for (; a >= 0; a++)
-				free(array[a]);
+			for (b = 0; b < a; b++)
+				free(array[b]);
 			free(array);
 			return (NULL);
 		}
@@ -43,8 +43,6 @@ int **alloc_grid(int width, int height)
 		{
 			array[a][b] = 0;
 		}
-		
 	}
 	return (array);
-	free (array);
 }
