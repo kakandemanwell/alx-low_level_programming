@@ -1,42 +1,49 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything
- * @format: type list of input argument passed to the function
- * Return: nothing
+ * print_all - prints all
+ * @format: param
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0;
-	char *string;
-	char abv = format[i];
+	va_list valist;
+	unsigned int i = 0, j, k = 0;
+	char *str;
+	const char t_arg[] = "cifs";
 
-	va_start(args, format);
-
-	while (abv)
+	va_start(valist, format);
+	while (format && format[i])
 	{
-		if (abv == 'c')
-			printf("%c", (char)va_arg(args, int));
-		else if (abv == 'i')
-			printf("%d", va_arg(args, int));
-		else if (abv == 'f')
-			printf("%f", va_arg(args, double));
-		else if (abv == 's')
+		j = 0;
+		while (t_arg[j])
 		{
-			string = va_arg(args, char *);
-			if (string == NULL)
-				printf("(nil)");
-			else
+			if (format[i] == t_arg[j] && k)
 			{
-				printf("%s", string);
-			}
+				printf(", ");
+				break;
+			} j++;
 		}
-		i++;
+		switch (format[i])
+		{
+		case 'c':
+			printf("%c", va_arg(valist, int)), k = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(valist, int)), k = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(valist, double)), k = 1;
+			break;
+		case 's':
+			str = va_arg(valist, char *), k = 1;
+			if (!str)
+			{
+				printf("(nil)");
+				break;
+			}
+			printf("%s", str);
+			break;
+		} i++;
 	}
-	va_end(args);
-	printf("\n");
+	printf("\n"), va_end(valist);
 }
