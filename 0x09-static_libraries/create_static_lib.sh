@@ -15,3 +15,4 @@ ranlib liball.a
 
 # Cleanup the object files.
 rm *.o
+
